@@ -1,5 +1,15 @@
+*/Build
+*/Binaries
+*/DerivedDataCache
+*/Intermediate/
+*/Saved
+BuildingEscape/Content/StarterContent/
+
 # Visual Studio 2015 user specific files
 .vs/
+
+# Visual Studio 2015 database file
+*.VC.db
 
 # Compiled Object files
 *.slo
