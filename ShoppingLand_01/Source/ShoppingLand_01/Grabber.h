@@ -18,6 +18,8 @@ public:
 	// Sets default values for this component's properties
 	UGrabber();
 
+	bool IsGrabbed;
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;

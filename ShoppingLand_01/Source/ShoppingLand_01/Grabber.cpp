@@ -21,7 +21,6 @@ UGrabber::UGrabber()
 // Called when the game starts
 void UGrabber::BeginPlay()
 {
-	UE_LOG(LogTemp, Error, TEXT("123456"));
 	Super::BeginPlay();
 	FindPhysicsComponent();
 	SetupInputComponent();
@@ -34,7 +33,6 @@ void UGrabber::FindPhysicsComponent()
 	if (PhysicsHandle == nullptr)
 	{
 		UE_LOG(LogTemp, Error, TEXT("%s missing physics handle component"), *GetOwner()->GetName());
-
 	}
 }
 
@@ -45,9 +43,8 @@ void UGrabber::SetupInputComponent()
 
 	if (InputCompnent)
 	{
-
 		InputCompnent->BindAction("Grab", IE_Pressed, this, &UGrabber::Grab);
-		InputCompnent->BindAction("Grab", IE_Released, this, &UGrabber::Release);
+		InputCompnent->BindAction("Release", IE_Released, this, &UGrabber::Release);
 	}
 	else
 	{
